@@ -8,6 +8,9 @@ public class SubmissionDTO {
 	private String submissionDate;
 	private String clientResponse;
 	private String candidateName;
+	
+	
+	
 	public String getSyneSubmissionId() {
 		return syneSubmissionId;
 	}

@@ -13,31 +13,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.syne.positions.dto.SubmissionDTO;
-import com.syne.positions.service.SubmissionService;
-
+import com.syne.positions.dto.InterviewDTO;
+import com.syne.positions.service.InterviewService;
 
 @RestController
-public class SubmissionController {
+public class InterviewController {
+
 	@Autowired
 	//Submissions submissions;
-	SubmissionService submissionService;
+	InterviewService interviewService;
 
 	  @CrossOrigin(origins = "http://localhost:4201")
+	@GetMapping("/getInterviews")
+	public List<InterviewDTO> getInterviews(){
 
-	@GetMapping("/getSubmissions")
-	public List<SubmissionDTO> getSubmissions(){
-
-		List<SubmissionDTO> submissionsList = submissionService.getSubmissions();
-		return submissionsList;
+		List<InterviewDTO> interviewList = interviewService.getInterviews();
+		return interviewList;
 	}
 
 	  @CrossOrigin(origins = "http://localhost:4201")
-	@RequestMapping("/getSubmissionsbyId/{id}")
+	@RequestMapping("/getInterviewsById/{id}")
 	@ResponseBody
-	public List<SubmissionDTO> getSubmissionsbyId(@PathVariable("id") String id,HttpServletRequest req, HttpServletResponse res){
+	public List<InterviewDTO> getInterviewsById(@PathVariable("id") String id,HttpServletRequest req, HttpServletResponse res){
 
-		List<SubmissionDTO> submissionsList = submissionService.getSubmissionsbyId(id);
-		return submissionsList;
+		List<InterviewDTO> interviewList = interviewService.getInterviewsById(id);
+		return interviewList;
 	}
 }
+	
+

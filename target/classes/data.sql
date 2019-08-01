@@ -85,7 +85,7 @@ INSERT INTO open_positions (serial_key,
 
 
 
-
+/*
 DROP TABLE IF EXISTS  submissions;
 
 CREATE TABLE  submissions(
@@ -142,6 +142,41 @@ l3interview_date
 ('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','NA','Shone Johnson','UI Developer','7 Years',
 'Mumbai','Mumbai','Citiustech','Valid','Processing','NA','NO','NO',null,'Victor H','NA','2019-07-04','2019-07-06',null);
 
+*/
+
+DROP TABLE IF EXISTS  submissions;
+
+CREATE TABLE  submissions(
+syne_submission_id VARCHAR(50) PRIMARY KEY,
+syne_opt_id VARCHAR(30) NOT NULL,
+submission_date DATE,
+client_response varchar(50),
+candidate_name VARCHAR(30),
+employee_id VARCHAR(50),
+experience VARCHAR(20),
+current_location VARCHAR(30),
+preffered_location VARCHAR(20),
+submission_status VARCHAR(20),
+is_selected boolean,
+foreign key (syne_opt_id) references open_positions(syne_opt_id));
+
+INSERT INTO SUBMISSIONS(
+syne_submission_id,
+syne_opt_id,
+submission_date,
+client_response,
+candidate_name,
+employee_id,
+experience,
+current_location,
+preffered_location,
+submission_status,
+is_selected
+)VALUES
+('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-05','NA','Loganathan.S','6341','8 Years',
+'Chennai','Bangalore','Processing',false),
+('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','NA','Shone Johnson','8847','7 Years',
+'Mumbai','Mumbai','Processing',false);
 
 
 DROP TABLE IF EXISTS  roles;
@@ -169,3 +204,45 @@ foreign key (account_id) references accounts(account_id)
 INSERT INTO users (employee_id, name, role_id, account_id) VALUES
 (6341, 'Vishal Gadekar', 1, 1),
 (8847, 'Neha Prasad', 2, 1);
+
+
+
+DROP TABLE IF EXISTS interview;
+
+CREATE TABLE interview(
+syne_interview_id VARCHAR(50) PRIMARY KEY,
+syne_submission_id VARCHAR(50) NOT NULL,
+status_of_interview VARCHAR(30),
+interview_type VARCHAR(50),
+l1panelist VARCHAR(30),
+l1interview_date VARCHAR(20),
+l1feedback TEXT,
+l2panelist VARCHAR(30),
+l2interview_date VARCHAR(20),
+l2feedback TEXT,
+l3panelist VARCHAR(30),
+l3interview_date VARCHAR(20),
+l3feedback TEXT,
+foreign key (syne_submission_id) references submissions(syne_submission_id));
+
+
+INSERT INTO interview(
+syne_interview_id,
+syne_submission_id,
+status_of_interview,
+interview_type,
+l1panelist,
+l1interview_date,
+l1feedback,
+l2panelist,
+l2interview_date,
+l2feedback,
+l3panelist,
+l3interview_date,
+l3feedback
+) VALUES
+('1','SYN18-OPT-B-420-SUB-2','processing','technical','Elon Musk','2019-05-05','good in java core','Larry Page','2019-05-07','good in java advanced',
+'Steve Wozniak','2019-05-09','good in logics and frameworks'),
+('2','SYN18-OPT-B-423-SUB-5','processing','technical','Elon Musk','2019-05-05','good in java core','Larry Page','2019-05-07','good in java advanced',
+'Steve Wozniak','2019-05-09','good in logics and frameworks');
+
