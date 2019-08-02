@@ -7,21 +7,18 @@ import javax.persistence.Id;
 @Entity
 public class Interview {
 	@Id
-
-	@GeneratedValue
+    @GeneratedValue
 	private String syneInterviewId;
 	private String syneSubmissionId;
+	private String levelOfInterview;
 	private String statusOfInterview;
 	private String interviewType;
-	private String l1panelist;
-	private String l1interviewDate;
-	private String l1feedback;
-	private String l2panelist;
-	private String l2interviewDate;
-	private String l2feedback;
-	private String l3panelist;
-	private String l3interviewDate;
-	private String l3feedback;
+	private String interviewDate;
+	private String feedback;
+	
+	
+
+
 	
 	
 	public String getSyneInterviewId() {
@@ -48,59 +45,23 @@ public class Interview {
 	public void setInterviewType(String interviewType) {
 		this.interviewType = interviewType;
 	}
-	public String getL1panelist() {
-		return l1panelist;
+	public String getLevelOfInterview() {
+		return levelOfInterview;
 	}
-	public void setL1panelist(String l1panelist) {
-		this.l1panelist = l1panelist;
+	public void setLevelOfInterview(String levelOfInterview) {
+		this.levelOfInterview = levelOfInterview;
 	}
-	public String getL1interviewDate() {
-		return l1interviewDate;
+	public String getInterviewDate() {
+		return interviewDate;
 	}
-	public void setL1interviewDate(String l1interviewDate) {
-		this.l1interviewDate = l1interviewDate;
+	public void setInterviewDate(String interviewDate) {
+		this.interviewDate = interviewDate;
 	}
-	public String getL1feedback() {
-		return l1feedback;
+	public String getFeedback() {
+		return feedback;
 	}
-	public void setL1feedback(String l1feedback) {
-		this.l1feedback = l1feedback;
-	}
-	public String getL2panelist() {
-		return l2panelist;
-	}
-	public void setL2panelist(String l2panelist) {
-		this.l2panelist = l2panelist;
-	}
-	public String getL2interviewDate() {
-		return l2interviewDate;
-	}
-	public void setL2interviewDate(String l2interviewDate) {
-		this.l2interviewDate = l2interviewDate;
-	}
-	public String getL2feedback() {
-		return l2feedback;
-	}
-	public void setL2feedback(String l2feedback) {
-		this.l2feedback = l2feedback;
-	}
-	public String getL3panelist() {
-		return l3panelist;
-	}
-	public void setL3panelist(String l3panelist) {
-		this.l3panelist = l3panelist;
-	}
-	public String getL3interviewDate() {
-		return l3interviewDate;
-	}
-	public void setL3interviewDate(String l3interviewDate) {
-		this.l3interviewDate = l3interviewDate;
-	}
-	public String getL3feedback() {
-		return l3feedback;
-	}
-	public void setL3feedback(String l3feedback) {
-		this.l3feedback = l3feedback;
+	public void setFeedback(String feedback) {
+		this.feedback = feedback;
 	}
 	
 	

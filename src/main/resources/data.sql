@@ -160,7 +160,7 @@ submission_status VARCHAR(20),
 is_selected boolean,
 foreign key (syne_opt_id) references open_positions(syne_opt_id));
 
-INSERT INTO SUBMISSIONS(
+INSERT INTO submissions(
 syne_submission_id,
 syne_opt_id,
 submission_date,
@@ -206,7 +206,7 @@ INSERT INTO users (employee_id, name, role_id, account_id) VALUES
 (8847, 'Neha Prasad', 2, 1);
 
 
-
+/*
 DROP TABLE IF EXISTS interview;
 
 CREATE TABLE interview(
@@ -224,25 +224,29 @@ l3panelist VARCHAR(30),
 l3interview_date VARCHAR(20),
 l3feedback TEXT,
 foreign key (syne_submission_id) references submissions(syne_submission_id));
+*/
 
+DROP TABLE IF EXISTS interview;
+
+CREATE TABLE interview(
+syne_interview_id VARCHAR(50) PRIMARY KEY,
+syne_submission_id VARCHAR(50) NOT NULL,
+level_of_interview VARCHAR(30),
+status_of_interview VARCHAR(30),
+interview_type VARCHAR(50),
+interview_date VARCHAR(20),
+feedback TEXT,
+foreign key (syne_submission_id) references submissions(syne_submission_id));
 
 INSERT INTO interview(
 syne_interview_id,
 syne_submission_id,
+level_of_interview,
 status_of_interview,
 interview_type,
-l1panelist,
-l1interview_date,
-l1feedback,
-l2panelist,
-l2interview_date,
-l2feedback,
-l3panelist,
-l3interview_date,
-l3feedback
+interview_date,
+feedback 
 ) VALUES
-('1','SYN18-OPT-B-420-SUB-2','processing','technical','Elon Musk','2019-05-05','good in java core','Larry Page','2019-05-07','good in java advanced',
-'Steve Wozniak','2019-05-09','good in logics and frameworks'),
-('2','SYN18-OPT-B-423-SUB-5','processing','technical','Elon Musk','2019-05-05','good in java core','Larry Page','2019-05-07','good in java advanced',
-'Steve Wozniak','2019-05-09','good in logics and frameworks');
+('1','SYN18-OPT-B-420-SUB-2','1st','processing','technical','2019-05-05','good in java core'),
+('2','SYN18-OPT-B-423-SUB-5','2nd','processing','technical','2019-05-09','good in logics and frameworks');
 

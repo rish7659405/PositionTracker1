@@ -3,57 +3,52 @@ package com.syne.positions.dto;
 public class InterviewDTO {
 
 	
-	private String l1feedback;
-	private String l2panelist;
-	private String l2interviewDate;
-	private String l2feedback;
-	private String l3panelist;
-	private String l3interviewDate;
-	private String l3feedback;
+	private String syneSubmissionId;
+	private String levelOfInterview;
+	private String statusOfInterview;
+	private String interviewType;
+	private String interviewDate;
+	private String feedback;
 	
 	
-	public String getL1feedback() {
-		return l1feedback;
+	public String getSyneSubmissionId() {
+		return syneSubmissionId;
 	}
-	public void setL1feedback(String l1feedback) {
-		this.l1feedback = l1feedback;
+	public void setSyneSubmissionId(String syneSubmissionId) {
+		this.syneSubmissionId = syneSubmissionId;
 	}
-	public String getL2panelist() {
-		return l2panelist;
+	public String getLevelOfInterview() {
+		return levelOfInterview;
 	}
-	public void setL2panelist(String l2panelist) {
-		this.l2panelist = l2panelist;
+	public void setLevelOfInterview(String levelOfInterview) {
+		this.levelOfInterview = levelOfInterview;
 	}
-	public String getL2interviewDate() {
-		return l2interviewDate;
+	public String getStatusOfInterview() {
+		return statusOfInterview;
 	}
-	public void setL2interviewDate(String l2interviewDate) {
-		this.l2interviewDate = l2interviewDate;
+	public void setStatusOfInterview(String statusOfInterview) {
+		this.statusOfInterview = statusOfInterview;
 	}
-	public String getL2feedback() {
-		return l2feedback;
+	public String getInterviewType() {
+		return interviewType;
 	}
-	public void setL2feedback(String l2feedback) {
-		this.l2feedback = l2feedback;
+	public void setInterviewType(String interviewType) {
+		this.interviewType = interviewType;
 	}
-	public String getL3panelist() {
-		return l3panelist;
+	public String getInterviewDate() {
+		return interviewDate;
 	}
-	public void setL3panelist(String l3panelist) {
-		this.l3panelist = l3panelist;
+	public void setInterviewDate(String interviewDate) {
+		this.interviewDate = interviewDate;
 	}
-	public String getL3interviewDate() {
-		return l3interviewDate;
+	public String getFeedback() {
+		return feedback;
 	}
-	public void setL3interviewDate(String l3interviewDate) {
-		this.l3interviewDate = l3interviewDate;
+	public void setFeedback(String feedback) {
+		this.feedback = feedback;
 	}
-	public String getL3feedback() {
-		return l3feedback;
-	}
-	public void setL3feedback(String l3feedback) {
-		this.l3feedback = l3feedback;
-	}
+	
+	
 	
 	
 	
