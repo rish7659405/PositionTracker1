@@ -251,6 +251,8 @@ interview_type,
 interview_date,
 feedback 
 ) VALUES
-('1','SYN18-OPT-B-420-SUB-2','1st','processing','technical','2019-05-05','good in java core'),
-('2','SYN18-OPT-B-423-SUB-5','2nd','processing','technical','2019-05-09','good in logics and frameworks');
+('1','SYN18-OPT-B-420-SUB-2','Level 1','Completed','Aptitute','2019-05-01','Good in logical reasoning and Problem Solving'),
+('2','SYN18-OPT-B-420-SUB-2','Level 2','Completed','Technical 1','2019-05-03','Good in Core Java concepts'),
+('3','SYN18-OPT-B-420-SUB-2','Level 3','processing','Technical 2','2019-05-05',NULL),
+('4','SYN18-OPT-B-423-SUB-5','Level 1','processing','Technical','2019-05-09',NULL);
 
