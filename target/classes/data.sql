@@ -152,6 +152,7 @@ syne_opt_id VARCHAR(30) NOT NULL,
 submission_date DATE,
 client_response varchar(50),
 candidate_name VARCHAR(30),
+candidate_image VARCHAR(30),
 employee_id VARCHAR(50),
 experience VARCHAR(20),
 current_location VARCHAR(30),
@@ -166,6 +167,7 @@ syne_opt_id,
 submission_date,
 client_response,
 candidate_name,
+candidate_image,
 employee_id,
 experience,
 current_location,
@@ -173,9 +175,9 @@ preffered_location,
 submission_status,
 is_selected
 )VALUES
-('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-05','NA','Loganathan.S','6341','8 Years',
+('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-05','NA','Loganathan.S','image_location.jpg','6341','8 Years',
 'Chennai','Bangalore','Processing',false),
-('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','NA','Shone Johnson','8847','7 Years',
+('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','NA','Shone Johnson','image_location1.jpg','8847','7 Years',
 'Mumbai','Mumbai','Processing',false);
 
 
