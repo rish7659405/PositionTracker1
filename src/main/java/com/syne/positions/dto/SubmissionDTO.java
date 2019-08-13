@@ -9,6 +9,7 @@ public class SubmissionDTO {
 	private String clientResponse;
 	private String candidateName;
 	private String candidateImage;
+	private String applicationSentOn;
 	
 	
 	
@@ -48,6 +49,12 @@ public class SubmissionDTO {
 	}
 	public void setCandidateImage(String candidateImage) {
 		this.candidateImage = candidateImage;
+	}
+	public String getApplicationSentOn() {
+		return applicationSentOn;
+	}
+	public void setApplicationSentOn(String applicationSentOn) {
+		this.applicationSentOn = applicationSentOn;
 	}
 	
 	
