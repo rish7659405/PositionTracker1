@@ -8,6 +8,7 @@ public class SubmissionDTO {
 	private String submissionDate;
 	private String clientResponse;
 	private String candidateName;
+	private String candidateImage;
 	
 	
 	
@@ -42,6 +43,14 @@ public class SubmissionDTO {
 	public void setCandidateName(String candidateName) {
 		this.candidateName = candidateName;
 	}
+	public String getCandidateImage() {
+		return candidateImage;
+	}
+	public void setCandidateImage(String candidateImage) {
+		this.candidateImage = candidateImage;
+	}
+	
+	
 
 
 }

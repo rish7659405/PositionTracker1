@@ -18,6 +18,7 @@ public class Submissions {
 	private String submissionDate;
 	private String clientResponse;
 	private String candidateName;
+	private String candidateImage;
 	private String employeeId;
 	//private String skillSet;
 	private String experience;
@@ -137,8 +138,16 @@ public class Submissions {
 	public void setIs_selected(boolean is_selected) {
 		this.is_selected = is_selected;
 	}
+	public String getCandidateImage() {
+		return candidateImage;
+	}
+	public void setCandidateImage(String candidateImage) {
+		this.candidateImage = candidateImage;
+	}
 
 
+	
+	
 
 }
 
