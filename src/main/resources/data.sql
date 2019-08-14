@@ -150,7 +150,7 @@ CREATE TABLE  submissions(
 syne_submission_id VARCHAR(50) PRIMARY KEY,
 syne_opt_id VARCHAR(30) NOT NULL,
 submission_date DATE,
-application_sent_on DATE,
+submission_type VARCHAR(30),
 client_response varchar(50),
 candidate_name VARCHAR(30),
 candidate_image VARCHAR(30),
@@ -166,7 +166,7 @@ INSERT INTO submissions(
 syne_submission_id,
 syne_opt_id,
 submission_date,
-application_sent_on,
+submission_type,
 client_response,
 candidate_name,
 candidate_image,
@@ -177,9 +177,9 @@ preffered_location,
 submission_status,
 is_selected
 )VALUES
-('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-05','2019-07-07','NA','Loganathan.S','image_location.jpg','6341','8 Years',
+('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-05','submitted','NA','Loganathan.S','image_location.jpg','6341','8 Years',
 'Chennai','Bangalore','Processing',false),
-('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','2019-06-30','NA','Shone Johnson','image_location1.jpg','8847','7 Years',
+('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','application sent on','NA','Shone Johnson','image_location1.jpg','8847','7 Years',
 'Mumbai','Mumbai','Processing',false);
 
 

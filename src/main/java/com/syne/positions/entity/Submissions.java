@@ -16,7 +16,7 @@ public class Submissions {
 	private String syneSubmissionId;
 	private String syneOptId;
 	private String submissionDate;
-	private String applicationSentOn;
+	private String submissionType;
 	private String clientResponse;
 	private String candidateName;
 	private String candidateImage;
@@ -145,11 +145,11 @@ public class Submissions {
 	public void setCandidateImage(String candidateImage) {
 		this.candidateImage = candidateImage;
 	}
-	public String getApplicationSentOn() {
-		return applicationSentOn;
+	public String getSubmissionType() {
+		return submissionType;
 	}
-	public void setApplicationSentOn(String applicationSentOn) {
-		this.applicationSentOn = applicationSentOn;
+	public void setSubmissionType(String submissionType) {
+		this.submissionType = submissionType;
 	}
 
 
