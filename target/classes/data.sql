@@ -179,8 +179,10 @@ is_selected
 )VALUES
 ('SYN18-OPT-B-420-SUB-1','SYN18-OPT-B-420','2019-07-05','Applied','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Completed',false),
 ('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-07','Application Sent On','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Processing',false),
+/*
 ('SYN18-OPT-B-420-SUB-3','SYN18-OPT-B-420','2019-07-05','Applied','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Completed',false),
-('SYN18-OPT-B-420-SUB-4','SYN18-OPT-B-420','2019-07-07','Application Sent On','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Processing',false),
+('SYN18-OPT-B-420-SUB-4','SYN18-OPT-B-420','2019-07-07','Application Sent On','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Processing',false),*/
+
 ('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-423','2019-06-28','application sent on','NA','Shone Johnson','image_location1.jpg','8847','7 Years','Mumbai','Mumbai','Processing',false);
 
 /*('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-05','submitted','NA','Loganathan.S','image_location.jpg','6341','8 Years',
