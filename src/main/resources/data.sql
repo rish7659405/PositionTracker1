@@ -257,8 +257,8 @@ interview_type,
 interview_date,
 feedback 
 ) VALUES
-('1','SYN18-OPT-B-420-SUB-1','Level 1','Completed','Aptitute','2019-05-01','Good in logical reasoning and Problem Solving'),
-('2','SYN18-OPT-B-423-SUB-5','Level 1','Awaiting HR/PMO Action','Technical','2019-05-09',NULL);
+('1','SYN18-OPT-B-420-SUB-1','Level 1','processing','Technical','2019-05-01','Good in logical reasoning and Problem Solving'),
+('2','SYN18-OPT-B-423-SUB-5','Awaiting HR/PMO Action','processing','Technical','2019-05-09',NULL);
 
 
 
