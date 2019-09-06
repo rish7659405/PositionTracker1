@@ -80,9 +80,13 @@ INSERT INTO open_positions (serial_key,
   rmg_spoc,
   recruiter_lead,
   recruiter,
-  job_description) VALUES (420, 'SYN18-OPT-B-420', 1 ,'NA','2019-07-02',3,'Ankush Jain','WIP','P2','UIT Modernization','WMT','ODC','NA','Bangalore',1,'Multi Threading','4-7 Years','Open',5,2,'Nitish Srivastava','Rajani G','Smita ','Smita','This is a sample JD'),
+  job_description) VALUES /*(420, 'SYN18-OPT-B-420', 1 ,'NA','2019-07-02',3,'Ankush Jain','WIP','P2','UIT Modernization','WMT','ODC','NA','Bangalore',1,'Multi Threading','4-7 Years','Open',5,2,'Nitish Srivastava','Rajani G','Smita ','Smita','This is a sample JD'),
   (423, 'SYN18-OPT-B-423', 1,'NA','2019-07-01',4,'Avinash Tiwari','WIP','P2','IM IT','WMT','Co-located','NA','Mumbai',2 ,'Full Stack','4-7 Years','Open',0,0,'Amit Bapat','Rajani G','Siddhesh Katkar ','Siddhesh Katkar','This is a sample JD'); 			
+*/
 
+(420, 'SYN18-OPT-B-420', 1 ,'NA','2019-07-02',3,'Ankush Jain','WIP','P2','UIT Modernization','WMT','ODC','NA','Bangalore',1,'Multi Threading','4-7 Years','Open',7,5,'Nitish Srivastava','Rajani G','Smita ','Smita','This is a sample JD'),
+(423, 'SYN18-OPT-B-423', 1,'NA','2019-07-01',4,'Avinash Tiwari','WIP','P2','IM IT','WMT','Co-located','NA','Mumbai',2 ,'Full Stack','4-7 Years','Open',0,0,'Amit Bapat','Rajani G','Siddhesh Katkar ','Siddhesh Katkar','This is a sample JD'),			
+(424,'SYN18-OPT-B-424', 1,'NA','2019-08-05',4,'Rajani Jain','WIP','P2','IM IT','WMT','Co-located','NA','Mumbai',2 ,'Full Stack','4-7 Years','Open',3,2,'Raj Joshi','Suraj Raut','Avinash Bapat','Avinash Bapat','This is a sample JD');
 
 
 /*
@@ -177,9 +181,9 @@ preffered_location,
 submission_status,
 is_selected
 )VALUES
-('SYN18-OPT-B-420-SUB-1','SYN18-OPT-B-420','2019-07-05','2019-07-07','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Completed',false),
+/*('SYN18-OPT-B-420-SUB-1','SYN18-OPT-B-420','2019-07-05','2019-07-07','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Completed',false),
 ('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-423','2019-06-28','2019-07-01','NA','Shone Johnson','image_location1.jpg','8847','7 Years','Mumbai','Mumbai','Processing',false);
-
+*/
 /*('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-07','Application Sent On','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Processing',false),
 ('SYN18-OPT-B-420-SUB-3','SYN18-OPT-B-420','2019-07-05','Applied','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Completed',false),
 ('SYN18-OPT-B-420-SUB-4','SYN18-OPT-B-420','2019-07-07','Application Sent On','NA','Loganathan.S','image_location.jpg','6341','8 Years','Chennai','Bangalore','Processing',false),
@@ -187,6 +191,17 @@ is_selected
 'Chennai','Bangalore','Processing',false),
 ('SYN18-OPT-B-423-SUB-5','SYN18-OPT-B-420','2019-06-28','APPLIED','NA','Shone Johnson','image_location1.jpg','8847','7 Years',
 'Mumbai','Mumbai','Processing',false);*/
+('SYN18-OPT-B-420-SUB-1','SYN18-OPT-B-420','2019-07-05','2019-07-06','NA','Amrish Chandra','image_location.jpg','15420','8 Years','Chennai','Bangalore','Completed',false),
+('SYN18-OPT-B-420-SUB-2','SYN18-OPT-B-420','2019-07-06','2019-07-06','NA','Anupam Bhattacharya','image_location.jpg','14230','5 Years','Pune','Mumbai','Completed',false),
+
+
+('SYN18-OPT-B-420-SUB-3','SYN18-OPT-B-420','2019-07-06','2019-07-07','NA','Loganathan.S','image_location.jpg','6341','4 Years','Hydrabad','Bangalore','Completed',false),
+('SYN18-OPT-B-420-SUB-4','SYN18-OPT-B-420','2019-07-07','2019-07-07','NA','Rohit Shaha','image_location.jpg','14230','7 Years','Pune','Pune','Completed',false),
+('SYN18-OPT-B-420-SUB-5','SYN18-OPT-B-420','2019-07-08','2019-07-09','NA','Ratan Kanhe','image_location.jpg','12030','6 Years','Pune','Bangalore','Completed',false),
+
+('SYN18-OPT-B-423-SUB-1','SYN18-OPT-B-424','2019-08-10','2019-08-11','NA','Shone Johnson','image_location1.jpg','8847','7 Years','Mumbai','Mumbai','Processing',false),
+('SYN18-OPT-B-423-SUB-2','SYN18-OPT-B-424','2019-08-12','2019-08-13','NA','Reshma Jain','image_location1.jpg','5672','10 Years','Mumbai','Pune','Processing',false);
+
 
 
 DROP TABLE IF EXISTS  roles;
@@ -257,8 +272,38 @@ interview_type,
 interview_date,
 feedback 
 ) VALUES
+/*
 ('1','SYN18-OPT-B-420-SUB-1','Level 1','processing','Technical','2019-05-01','Good in logical reasoning and Problem Solving'),
-('2','SYN18-OPT-B-423-SUB-5','Awaiting HR/PMO Action','processing','Technical','2019-05-09',NULL);
+('2','SYN18-OPT-B-423-SUB-5','Awaiting HR/PMO Action','processing','Technical','2019-05-09',NULL);*/
+('1','SYN18-OPT-B-420-SUB-1','Level 1','Completed','Technical 1','2019-05-01','Good in logical reasoning and Problem Solving'),
+('2','SYN18-OPT-B-420-SUB-1','Level 2','Completed','Technical 2','2019-05-03','Good in Core java'),
+('3','SYN18-OPT-B-420-SUB-1','Awaiting HR/PMO Action','processing','HR/PMO','2019-05-05','NULL'),
+
+('4','SYN18-OPT-B-420-SUB-2','Level 1','Completed','Aptitute 1','2019-05-05','Good in logical reasoning and Problem Solving'),
+('5','SYN18-OPT-B-420-SUB-2','Level 2','Completed','Technical 1','2019-05-08','Good in advance java concepts'),
+('6','SYN18-OPT-B-420-SUB-2','Awaiting HR/PMO Action','processing','HR/PMO','2019-05-15','NULL'),
+
+('7','SYN18-OPT-B-420-SUB-3','Level 1','Completed','Technical 1','2019-05-08','Good in advance java concepts'),
+('8','SYN18-OPT-B-420-SUB-3','Awaiting HR/PMO Action','processing','HR/PMO','2019-05-15','NULL'),
+
+/*
+('7','SYN18-OPT-B-420-SUB-4','Level 1','processing','Technical 1','2019-05-015','NULL'),
+
+('8','SYN18-OPT-B-420-SUB-5','Level 1','Completed','Aptitute 1','2019-05-05','Good in logical reasoning and Problem Solving');
+('8','SYN18-OPT-B-420-SUB-5','Level 2','Completed','Technical 1','2019-05-09','Good in Core java');
+('8','SYN18-OPT-B-420-SUB-5','Level 3','Completed','Technical 2','2019-05-12','Good in advance java concepts');
+('8','SYN18-OPT-B-420-SUB-5','Awaiting HR/PMO Action','processing','Technical','2019-05-09',NULL);
+*/
+
+
+('9','SYN18-OPT-B-423-SUB-1','Level 1','Completed','Technical 1','2019-05-08','Good in advance java concepts'),
+('10','SYN18-OPT-B-423-SUB-1','Awaiting HR/PMO Action','processing','HR/PMO','2019-05-15','NULL'),
+
+
+('11','SYN18-OPT-B-423-SUB-2','Level 1','Completed','Technical 1','2019-05-01','Good in logical reasoning and Problem Solving'),
+('12','SYN18-OPT-B-423-SUB-2','Level 2','Completed','Technical 2','2019-05-03','Good in Core java'),
+('13','SYN18-OPT-B-423-SUB-2','Awaiting HR/PMO Action','processing','HR/PMO','2019-05-05','NULL');
+
 
 
 
