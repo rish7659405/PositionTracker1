@@ -21,7 +21,7 @@ public class OpenPositionsDTO {
 	private Long processing;
 	private String bizOwner;
 	private String recruiterLead;
-	private Long totalAging;
+	//private Long totalAging;
 
 
 	public String getReqDate() {
@@ -129,12 +129,7 @@ public class OpenPositionsDTO {
 	public void setSyneOptId(String syneOptId) {
 		this.syneOptId = syneOptId;
 	}
-	public Long getTotalAging() {
-		return totalAging;
-	}
-	public void setTotalAging(Long totalAging) {
-		this.totalAging = totalAging;
-	}
+
 	
 	
 

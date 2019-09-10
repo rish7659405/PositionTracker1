@@ -35,14 +35,8 @@ public class OpenPositions {
 	private String recruiterLead;
 	private String recruiter;
 	private String jobDescription;
-	private String totalAging;
+	//private String totalAging;
 
-	public String getTotalAging() {
-		return totalAging;
-	}
-	public void setTotalAging(String totalAging) {
-		this.totalAging = totalAging;
-	}
 	public String getJobDescription() {
 		return jobDescription;
 	}

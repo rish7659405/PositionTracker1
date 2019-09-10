@@ -19,7 +19,7 @@ public interface PositionsRepository extends JpaRepository<OpenPositions, Long>,
 	 */
 	  
 	  @Query (value =
-	  		"select(select DATEDIFF( CURDATE(),o.req_date) AS days) as total_aging ,o.* from (SELECT * FROM open_positions)as o", 
+	  		"select(select DATEDIFF( CURDATE(),o.req_date) AS days) as aging ,o.* from (SELECT * FROM open_positions)as o", 
 	  nativeQuery = true)
 	  List<OpenPositions> findAll();
 	  
