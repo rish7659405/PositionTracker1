@@ -22,6 +22,25 @@ public interface PositionsRepository extends JpaRepository<OpenPositions, Long>,
 	  		"select(select DATEDIFF( CURDATE(),o.req_date) AS days) as aging ,o.* from (SELECT * FROM open_positions)as o", 
 	  nativeQuery = true)
 	  List<OpenPositions> findAll();
+
+	  @Query (value =
+		  		"select(select DATEDIFF( CURDATE(),o.req_date) AS days) as aging ,o.* from (SELECT * FROM open_positions)as o where o.location=?", 
+		  nativeQuery = true)
+	List<OpenPositions> findAllById(String location);
+
+	  
+	  @Query (value =
+		  		"select A.* from(select(select DATEDIFF( CURDATE(),o.req_date) AS days) as aging ,o.* from"
+		  		+ " (SELECT syne_opt_id,serial_key"
+		  		+ ",account_id," + 
+		  		"fg_id,req_date,hiring_manager," + 
+		  		"hiring_comment,priority,project,line_of_business,role_category,tfr,location,skill_id,must_have_skills,"
+		  		+ "experience,band," + 
+		  		"final_status,client_submission,processing,biz_owner,rmg_spoc,recruiter_lead,recruiter,job_description "
+		  		+ "FROM open_positions)" + 
+		  		"as o)as A where A.aging<74", 
+		  nativeQuery = true)
+	List<OpenPositions> getPositionsByAging(String days);
 	  
 	
 	

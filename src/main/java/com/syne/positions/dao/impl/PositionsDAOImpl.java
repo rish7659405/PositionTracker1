@@ -27,5 +27,19 @@ public class PositionsDAOImpl implements PositionsDAO{
 	}
 
 
+	@Override
+	public List<OpenPositions> getPositionsByLocation(String location) {
+		// TODO Auto-generated method stub
+		return repository.findAllById(location);
+	}
+
+
+	@Override
+	public List<OpenPositions> getPositionsByAging(String days) {
+		// TODO Auto-generated method stub
+		return repository.getPositionsByAging(days);
+	}
+
+
 
 }

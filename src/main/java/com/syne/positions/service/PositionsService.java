@@ -8,4 +8,8 @@ public interface PositionsService {
 
 	public List<OpenPositionsDTO> getOpenPositions();
 
+	public List<OpenPositionsDTO> getPositionsByLocation(String location);
+
+	public List<OpenPositionsDTO> getPositionsByAging(String days);
+
 }
