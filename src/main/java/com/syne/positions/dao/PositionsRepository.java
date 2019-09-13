@@ -38,7 +38,7 @@ public interface PositionsRepository extends JpaRepository<OpenPositions, Long>,
 		  		+ "experience,band," + 
 		  		"final_status,client_submission,processing,biz_owner,rmg_spoc,recruiter_lead,recruiter,job_description "
 		  		+ "FROM open_positions)" + 
-		  		"as o)as A where A.aging<74", 
+		  		"as o)as A where A.aging<?", 
 		  nativeQuery = true)
 	List<OpenPositions> getPositionsByAging(String days);
 	  
