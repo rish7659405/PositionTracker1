@@ -9,11 +9,13 @@ import javax.persistence.Id;
 @Entity
 public class OpenPositions {
 	@Id
-	@GeneratedValue
-	private Long serialKey;
 	private String syneOptId;
+	public void setSyneOptId(String syneOptId) {
+		this.syneOptId = syneOptId;
+	}
+	private Long serialKey;
 	private String fgId;
-	private Date  reqDate;
+	private String  reqDate;//Date
 	private Long aging;
 	private String hiringManager;
 	private String  hiringComment;
@@ -62,14 +64,21 @@ public class OpenPositions {
 	public void setFgId(String fgId) {
 		this.fgId = fgId;
 	}
-	public Date getReqDate() {
-		return reqDate;
-	}
-	public void setReqDate(Date reqDate) {
-		this.reqDate = reqDate;
-	}
+
+	/*
+	 * public Date getReqDate() { return reqDate; } public void setReqDate(Date
+	 * reqDate) { this.reqDate = reqDate; }
+	 */
+	
+	
 	public Long getAging() {
 		return aging;
+	}
+	public String getReqDate() {
+		return reqDate;
+	}
+	public void setReqDate(String reqDate) {
+		this.reqDate = reqDate;
 	}
 	public void setAging(Long aging) {
 		this.aging = aging;

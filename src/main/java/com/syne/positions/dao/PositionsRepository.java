@@ -10,7 +10,10 @@ import com.syne.positions.entity.OpenPositions;
 import com.syne.positions.entity.Submissions;
 
 @Repository
-public interface PositionsRepository extends JpaRepository<OpenPositions, Long>, JpaSpecificationExecutor<OpenPositions>{//: CURRENT_DATE- o.reqDate
+public interface PositionsRepository extends JpaRepository<OpenPositions, Long>, 
+JpaSpecificationExecutor<OpenPositions>{
+	
+	//: CURRENT_DATE- o.reqDate
 	/*
 	 * @Query
 	 * ("UPDATE  OpenPositions x  SET x.totalAging =: DATEDIFF(CURRENT_DATE,x.reqDate)"
@@ -41,7 +44,11 @@ public interface PositionsRepository extends JpaRepository<OpenPositions, Long>,
 		  		"as o)as A where A.aging<?", 
 		  nativeQuery = true)
 	List<OpenPositions> getPositionsByAging(String days);
-	  
+	
+	  @Query (value =
+		"select * from open_positions o where o.syne_opt_id=?", 
+		  nativeQuery = true)
+		  List<OpenPositions> findByID(String id);
 	
 	
 }

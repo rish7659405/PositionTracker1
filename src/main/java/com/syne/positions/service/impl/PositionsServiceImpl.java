@@ -3,6 +3,8 @@ package com.syne.positions.service.impl;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.syne.positions.dao.PositionsDAO;
 import com.syne.positions.dto.OpenPositionsDTO;
-import com.syne.positions.dto.SubmissionDTO;
 import com.syne.positions.entity.OpenPositions;
-import com.syne.positions.entity.Submissions;
 import com.syne.positions.service.PositionsService;
 
 
@@ -47,6 +47,22 @@ public class PositionsServiceImpl implements PositionsService{
 		List<OpenPositions> openPositionsEntityList = positionsDAO.getPositionsByAging(days);
 		List<OpenPositionsDTO> openPositionsDto = new ModelMapper().map(openPositionsEntityList, listType);
 		return  openPositionsDto;
+	}
+
+	@Override
+	public boolean saveOpenPositions(OpenPositions openPositions) {
+		// TODO Auto-generated method stub
+		if(positionsDAO.saveOpenPositions(openPositions))
+		{return true;}
+		return false;
+	}
+
+	@Override
+	public boolean updateOpenPositions(String id, @Valid OpenPositions openpositions) {
+		// TODO Auto-generated method stub
+		if(positionsDAO.updateOpenPositions(id,openpositions))
+		{return true;}
+		return false;
 	}
 
 }
