@@ -48,7 +48,7 @@ JpaSpecificationExecutor<OpenPositions>{
 	  @Query (value =
 		"select * from open_positions o where o.syne_opt_id=?", 
 		  nativeQuery = true)
-		  List<OpenPositions> findByID(String id);
+		  OpenPositions findByID(String id);
 	
 	
 }

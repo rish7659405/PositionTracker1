@@ -64,7 +64,8 @@ public class PositionsDAOImpl implements PositionsDAO{
 	@Override
 	public boolean updateOpenPositions(String id, @Valid OpenPositions openpositions) {
 		// TODO Auto-generated method stub
-		if(repository.findByID(id)!=null)
+		OpenPositions openpositions1=repository.findByID(id);
+		if(openpositions1!=null)
 		{
 			if(repository.save(openpositions)!=null)
 			{return true;}
