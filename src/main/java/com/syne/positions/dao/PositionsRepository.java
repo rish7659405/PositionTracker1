@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.syne.positions.entity.OpenPositions;
 import com.syne.positions.entity.Submissions;
+import com.syne.positions.modal.LocationCount;
 
 @Repository
 public interface PositionsRepository extends JpaRepository<OpenPositions, Long>, 
@@ -49,6 +50,10 @@ JpaSpecificationExecutor<OpenPositions>{
 		"select * from open_positions o where o.syne_opt_id=?", 
 		  nativeQuery = true)
 		  OpenPositions findByID(String id);
-	
+	  
+	  
+
+	  @Query(value="SELECT count(*)as count, o.location FROM open_positions o group by location", nativeQuery=true)
+	  List<Object[]> getAllPositonsCount();
 	
 }

@@ -22,7 +22,7 @@ public class OpenPositionsDTO {
 	private String bizOwner;
 	private String recruiterLead;
 	//private Long totalAging;
-
+     private int count;
 
 	public String getReqDate() {
 		return reqDate;
@@ -128,6 +128,12 @@ public class OpenPositionsDTO {
 	}
 	public void setSyneOptId(String syneOptId) {
 		this.syneOptId = syneOptId;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
 	}
 
 	

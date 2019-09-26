@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.syne.positions.dao.PositionsDAO;
 import com.syne.positions.dao.PositionsRepository;
 import com.syne.positions.entity.OpenPositions;
+import com.syne.positions.modal.LocationCount;
 
 @Service
 public class PositionsDAOImpl implements PositionsDAO{
@@ -72,6 +73,12 @@ public class PositionsDAOImpl implements PositionsDAO{
 		}
 		return false;
 	}
+
+
+	/*
+	 * @Override public List<OpenPositions> getPositionsCount() { // TODO
+	 * Auto-generated method stub return repository.findcount(); }
+	 */
 
 
 

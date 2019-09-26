@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import com.syne.positions.dao.PositionsDAO;
 import com.syne.positions.dto.OpenPositionsDTO;
 import com.syne.positions.entity.OpenPositions;
+import com.syne.positions.modal.LocationCount;
 import com.syne.positions.service.PositionsService;
 
 
@@ -64,5 +65,15 @@ public class PositionsServiceImpl implements PositionsService{
 		{return true;}
 		return false;
 	}
+
+	/*
+	 * @Override public List<OpenPositionsDTO> getPositionsCount() { // TODO
+	 * Auto-generated method stub
+	 * 
+	 * Type listType = new TypeToken<List<LocationCount>>() {}.getType();
+	 * List<OpenPositions> openPositionsEntityList =
+	 * positionsDAO.getPositionsCount(); List<OpenPositionsDTO> openPositions = new
+	 * ModelMapper().map(openPositionsEntityList, listType); return openPositions; }
+	 */
 
 }

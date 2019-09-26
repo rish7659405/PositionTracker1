@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import com.syne.positions.dto.OpenPositionsDTO;
 import com.syne.positions.entity.OpenPositions;
+import com.syne.positions.modal.LocationCount;
 
 public interface PositionsService {
 
@@ -18,5 +19,9 @@ public interface PositionsService {
 	public boolean saveOpenPositions(OpenPositions openPositions);
 
 	public boolean updateOpenPositions(String id, @Valid OpenPositions openpositions);
+
+	/* public List<OpenPositionsDTO> getPositionsCount(); */
+
+	
 
 }
